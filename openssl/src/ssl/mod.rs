@@ -1172,7 +1172,7 @@ impl SslContextBuilder {
                 self.as_ptr(),
                 version.map_or(0, |v| v.0 as _),
             ))
-            .map(|_| ())
+            .map(|r| eprintln!("result {:?}", r))
         }
     }
 
